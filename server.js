@@ -35,7 +35,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Routes
 app.get('/', (req, res) => {
-  res.json({ data: 'Example Node API.' });
+  res.json({ success: true, data: 'Example Node API.' });
 });
 
 app.use('/api/v1/auth', require('./routes/auth'));
