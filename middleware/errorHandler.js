@@ -1,7 +1,7 @@
 const errorHandler = (err, req, res, next) => {
   let customError = {
     statusCode: err.statusCode || 500,
-    msg: err.message || 'Something went wrong. Try again.',
+    msg: err.message || 'Something went wrong. Try again later.',
   };
 
   //Mongoose validation error
