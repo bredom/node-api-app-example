@@ -10,11 +10,11 @@ const { AppError } = require('./utils/AppError');
 require('./db/db');
 
 //First install with npm
-/* const helmet = require('helmet');
-const mongoSanitize = require('express-mongo-sanitize');
+const cors = require('cors');
+const helmet = require('helmet');
+/* const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean'); 
-const cookieParser = require('cookie-parser');
-const cors = require('cors'); */
+const cookieParser = require('cookie-parser'); */
 
 const app = express();
 
@@ -22,6 +22,9 @@ app.use(morgan('dev'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use(cors());
+app.use(helmet());
 
 //Static folder
 // app.use(express.static(path.join(__dirname, 'public')));
