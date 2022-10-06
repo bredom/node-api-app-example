@@ -1,0 +1,3 @@
+const loading = () => {
+  return 'Loading...';
+};
