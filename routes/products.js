@@ -8,7 +8,7 @@ const {
 
 const { authenticateUser } = require('../middleware/auth');
 
-router.route('/').get(getAllProducts);
+router.route('/').get(authenticateUser, getAllProducts);
 router.route('/static').get(getAllProductsStatic);
 
 module.exports = router;
